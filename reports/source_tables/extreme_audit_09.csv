@@ -1,0 +1,5 @@
+Unnamed: 0,Period,Variant,Start,End,Net Total Return (%),Net CAGR (%),Gross Ann Mean (%),Cost Ann (%),Net Ann Mean (%),Ann Vol (%),Sharpe (vs zero),Max Drawdown (%)
+0,Train,Original,2011-06-16,2017-12-29,12.1665,1.7709,2.2102,0.4878,1.7224,2.3405,0.7359,-3.8633
+1,Train,Extra 1-observation delay,2011-06-16,2017-12-29,9.1334,1.3452,1.8081,0.4887,1.3194,2.42,0.5452,-4.1544
+2,Test,Original,2018-01-01,2026-08-31,17.4231,1.8696,2.4337,0.6004,1.8334,2.9405,0.6235,-4.2721
+3,Test,Extra 1-observation delay,2018-01-01,2026-08-31,4.8292,0.5454,1.1774,0.5999,0.5774,3.2188,0.1794,-9.5705

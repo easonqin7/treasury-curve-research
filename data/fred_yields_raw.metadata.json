@@ -1,0 +1,24 @@
+{
+  "source": "Federal Reserve Bank of St. Louis FRED; underlying Treasury constant-maturity series",
+  "series": {
+    "3M": "DGS3MO",
+    "6M": "DGS6MO",
+    "1Y": "DGS1",
+    "2Y": "DGS2",
+    "3Y": "DGS3",
+    "5Y": "DGS5",
+    "7Y": "DGS7",
+    "10Y": "DGS10",
+    "20Y": "DGS20",
+    "30Y": "DGS30"
+  },
+  "retrieved_at_utc": "2026-09-29T09:11:57.099614+00:00",
+  "requested_start": "2010-01-01",
+  "requested_end": "2026-08-31",
+  "actual_start": "2010-01-01",
+  "actual_end": "2026-08-31",
+  "rows": 4347,
+  "all_missing_rows": 179,
+  "sha256": "3604a78ae6605723de75138dea6da820605d017cbc309f9001c870084aa8922b",
+  "processing": "None: missing observations remain empty. No forward fill."
+}

@@ -1,0 +1,20 @@
+{
+  "checked_on": "2026-09-29",
+  "python": "3.12.7",
+  "offline_unit_tests": {
+    "passed": 5,
+    "failed": 0
+  },
+  "full_headless_workflow": "passed using versioned raw snapshot",
+  "notebook_execution": {
+    "passed": true,
+    "executed_code_cells": 6,
+    "errors": 0,
+    "rendered_figures": 6,
+    "presentation_note": "After execution, updated explanatory Markdown and suppressed a duplicate figure return display; numerical outputs unchanged."
+  },
+  "source_result_reconciliation": "calendar and legacy delay tables match original saved values within 0.000051 in displayed metric units",
+  "figure_inspection": "All six exported PNGs visually inspected for labels, legends and clipping.",
+  "portability": "Markdown links verified; no local absolute paths in published text; all source and notebook prose in English.",
+  "limits": "No independent market-price verification, live execution test, or prospective statistical validation."
+}

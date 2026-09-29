@@ -1,0 +1,32 @@
+name: Offline research checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      - run: python -m unittest discover -s tests -v
+        env:
+          MPLBACKEND: Agg
+      - name: Validate notebook structure
+        run: |
+          python - <<'PY'
+          import nbformat
+          notebook = nbformat.read('notebooks/treasury_nss_research.ipynb', as_version=4)
+          nbformat.validate(notebook)
+          for cell in notebook.cells:
+              if cell.cell_type == 'code':
+                  compile(cell.source, '<notebook>', 'exec')
+          PY

@@ -1,0 +1,13 @@
+{
+  "status": "completed",
+  "data_mode": "snapshot",
+  "snapshot_sha256": "3604a78ae6605723de75138dea6da820605d017cbc309f9001c870084aa8922b",
+  "selected_parameters": {
+    "window": 252,
+    "entry_z": 2.0,
+    "top_n": 2,
+    "gross_leverage": 1.0
+  },
+  "data_start": "2010-01-04",
+  "data_end": "2026-08-31"
+}

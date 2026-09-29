@@ -1,0 +1,303 @@
+Fetching FRED Treasury yield data...
+Actual data range: 2010-01-04 to 2026-08-31
+
+KMO Test Results:
+Overall KMO: 0.8918
+Interpretation: great
+
+KMO by Maturity:
+3M     0.7858
+6M     0.8231
+1Y     0.8991
+2Y     0.9152
+3Y     0.9171
+5Y     0.9094
+7Y     0.8973
+10Y    0.9253
+20Y    0.8663
+30Y    0.8607
+Name: KMO, dtype: float64
+
+PCA Explained Variance:
+PC1_Level        0.686815
+PC2_Slope        0.171680
+PC3_Curvature    0.075745
+dtype: float64
+Calibrating NSS curve day by day...
+Common training scoring start: 2011-06-16 (earlier observations are warm-up only)
+
+Training parameter comparison:
+ window  entry_z  Sharpe    CAGR  Ann Vol  Max Drawdown
+    252      2.0  0.7359  0.0177   0.0234       -0.0386
+    378      1.5  0.6296  0.0178   0.0276       -0.0320
+    252      1.5  0.5005  0.0146   0.0289       -0.0567
+    378      2.5  0.4897  0.0051   0.0101       -0.0162
+    126      2.5  0.3513  0.0073   0.0206       -0.0372
+    378      2.0  0.1528  0.0034   0.0233       -0.0448
+    252      2.5  0.1163  0.0015   0.0135       -0.0345
+    126      2.0 -0.2848 -0.0087   0.0282       -0.1355
+    126      1.5 -0.6056 -0.0188   0.0295       -0.1416
+
+Frozen parameters:
+window = 252, entry_z = 2.0
+
+Period performance:
+           Period      Start        End  Obs  Total Return   CAGR  Ann Vol  Sharpe  Max Drawdown
+Train (selection) 2011-06-16 2017-12-29 1707        0.1217 0.0177   0.0234  0.7359       -0.0386
+   Test 2018–2026 2018-01-01 2026-08-31 2261        0.1742 0.0187   0.0294  0.6235       -0.0427
+   Test 2018–2021 2018-01-01 2021-12-31 1045        0.1035 0.0249   0.0310  0.7812       -0.0427
+   Test 2022–2026 2022-01-03 2026-08-31 1216        0.0641 0.0134   0.0280  0.4747       -0.0384
+Test subperiods decompose the same frozen strategy; parameters are not reselected.
+
+Test returns by calendar year:
+ Year      Start        End  Obs  Period Return
+ 2018 2018-01-01 2018-12-31  261         0.0225
+ 2019 2019-01-01 2019-12-31  261         0.0122
+ 2020 2020-01-01 2020-12-31  262         0.0412
+ 2021 2021-01-01 2021-12-31  261         0.0240
+ 2022 2022-01-03 2022-12-30  260         0.0013
+ 2023 2023-01-02 2023-12-29  260         0.0336
+ 2024 2024-01-01 2024-12-31  262        -0.0325
+ 2025 2025-01-01 2025-12-31  261         0.0289
+ 2026 2026-01-01 2026-08-31  173         0.0329
+The final calendar year is partial through the available data cutoff.
+
+Strategy / benchmark comparison (same dates, no risk scaling):
+               Period                    Asset      Start        End  Total Return    CAGR  Ann Vol  Sharpe  Max Drawdown
+Selection (in-sample)       NSS strategy (net) 2011-06-16 2017-12-29        0.1217  0.0177   0.0234  0.7359       -0.0386
+Selection (in-sample)          10Y price proxy 2011-06-16 2017-12-29        0.0351  0.0053   0.0597  0.1151       -0.1230
+Selection (in-sample)          20Y price proxy 2011-06-16 2017-12-29        0.1630  0.0233   0.1166  0.2495       -0.2214
+Selection (in-sample) Equal-weight price proxy 2011-06-16 2017-12-29        0.0362  0.0055   0.0413  0.1479       -0.0811
+       Test 2018–2026       NSS strategy (net) 2018-01-01 2026-08-31        0.1742  0.0187   0.0294  0.6235       -0.0427
+       Test 2018–2026          10Y price proxy 2018-01-01 2026-08-31       -0.1886 -0.0238   0.0688 -0.3040       -0.3071
+       Test 2018–2026          20Y price proxy 2018-01-01 2026-08-31       -0.3732 -0.0524   0.1239 -0.3583       -0.5141
+       Test 2018–2026 Equal-weight price proxy 2018-01-01 2026-08-31       -0.1464 -0.0181   0.0475 -0.3479       -0.2345
+
+===== Train: Best 10 days =====
+  Period Group   PnL Date  ... Cost (%)  Net Return (%) Signed Duration
+0  Train  Best 2016-07-05  ...  0.00577         1.99446        20.00000
+1  Train  Best 2013-04-10  ...  0.00571         1.39418       -20.00000
+2  Train  Best 2012-10-04  ...  0.00590         1.39399       -20.00000
+3  Train  Best 2012-03-14  ...  0.00584         1.04810        -6.20000
+4  Train  Best 2014-05-19  ...  0.00566         0.99428       -20.00000
+5  Train  Best 2014-05-01  ...  0.00571         0.89433        15.00000
+6  Train  Best 2016-02-08  ...  0.00546         0.87458         8.00000
+7  Train  Best 2016-11-07  ...  0.00564         0.79432       -20.00000
+8  Train  Best 2016-02-17  ...  0.00606         0.74391       -15.00000
+9  Train  Best 2012-06-29  ...  0.00554         0.65700        -9.46565
+
+[10 rows x 11 columns]
+Maturity-level holdings and PnL details:
+   Period Group  ... Convexity Contribution (pp) Gross Contribution (pp)
+0   Train  Best  ...                    0.000225                2.000225
+1   Train  Best  ...                   -0.000110                1.399890
+2   Train  Best  ...                   -0.000110                1.399890
+3   Train  Best  ...                   -0.000065                1.053935
+4   Train  Best  ...                   -0.000056                0.999944
+5   Train  Best  ...                    0.000045                0.900045
+6   Train  Best  ...                    0.000045                0.880045
+7   Train  Best  ...                   -0.000036                0.799964
+8   Train  Best  ...                   -0.000031                0.749969
+9   Train  Best  ...                   -0.000004                0.236637
+10  Train  Best  ...                   -0.000043                0.425911
+
+[11 rows x 14 columns]
+
+===== Train: Worst 10 days =====
+   Period  Group   PnL Date  ... Cost (%)  Net Return (%) Signed Duration
+10  Train  Worst 2014-05-28  ...  0.00549        -1.60563           -20.0
+11  Train  Worst 2012-08-03  ...  0.00611        -1.50599            15.0
+12  Train  Worst 2012-07-20  ...  0.00592        -1.20600           -20.0
+13  Train  Worst 2014-04-17  ...  0.00578        -1.05572            15.0
+14  Train  Worst 2016-07-15  ...  0.00582        -1.00576            20.0
+15  Train  Worst 2016-06-23  ...  0.00563        -1.00557            20.0
+16  Train  Worst 2014-12-19  ...  0.01096        -0.91100           -15.0
+17  Train  Worst 2015-01-02  ...  0.00580        -0.90584           -15.0
+18  Train  Worst 2014-12-16  ...  0.00577        -0.75580           -15.0
+19  Train  Worst 2012-06-01  ...  0.00542        -0.62544            -6.2
+
+[10 rows x 11 columns]
+Maturity-level holdings and PnL details:
+   Period  Group  ... Convexity Contribution (pp) Gross Contribution (pp)
+11  Train  Worst  ...                   -0.000144               -1.600144
+12  Train  Worst  ...                    0.000125               -1.499875
+13  Train  Worst  ...                   -0.000081               -1.200081
+14  Train  Worst  ...                    0.000061               -1.049939
+15  Train  Worst  ...                    0.000056               -0.999944
+16  Train  Worst  ...                    0.000056               -0.999944
+17  Train  Worst  ...                   -0.000045               -0.900045
+18  Train  Worst  ...                   -0.000045               -0.900045
+19  Train  Worst  ...                   -0.000031               -0.750031
+20  Train  Worst  ...                   -0.000022               -0.620022
+
+[10 rows x 14 columns]
+
+===== Test: Best 10 days =====
+   Period Group   PnL Date  ... Cost (%)  Net Return (%) Signed Duration
+20   Test  Best 2020-09-04  ...  0.00552         2.39415           -20.0
+21   Test  Best 2024-03-14  ...  0.00000         1.34990           -15.0
+22   Test  Best 2021-11-30  ...  0.00000         1.20008            15.0
+23   Test  Best 2024-05-29  ...  0.00000         1.19992           -15.0
+24   Test  Best 2026-08-25  ...  0.00572         1.19436            20.0
+25   Test  Best 2020-01-03  ...  0.00589         1.19419            15.0
+26   Test  Best 2025-03-24  ...  0.00601         1.19391           -15.0
+27   Test  Best 2020-01-28  ...  0.00580         0.99415           -20.0
+28   Test  Best 2018-10-04  ...  0.01124         0.98871           -20.0
+29   Test  Best 2026-03-16  ...  0.00569         0.89435            15.0
+
+[10 rows x 11 columns]
+Maturity-level holdings and PnL details:
+   Period Group  ... Convexity Contribution (pp) Gross Contribution (pp)
+21   Test  Best  ...                   -0.000324                2.399676
+22   Test  Best  ...                   -0.000101                1.349899
+23   Test  Best  ...                    0.000080                1.200080
+24   Test  Best  ...                   -0.000080                1.199920
+25   Test  Best  ...                    0.000081                1.200081
+26   Test  Best  ...                    0.000080                1.200080
+27   Test  Best  ...                   -0.000080                1.199920
+28   Test  Best  ...                   -0.000056                0.999944
+29   Test  Best  ...                   -0.000056                0.999944
+30   Test  Best  ...                    0.000045                0.900045
+
+[10 rows x 14 columns]
+
+===== Test: Worst 10 days =====
+   Period  Group   PnL Date  ... Cost (%)  Net Return (%) Signed Duration
+30   Test  Worst 2019-11-07  ...  0.01076        -1.66061            15.0
+31   Test  Worst 2018-10-03  ...  0.01122        -1.51109            15.0
+32   Test  Worst 2020-03-17  ...  0.01028        -1.49815             6.2
+33   Test  Worst 2020-05-29  ...  0.00636        -1.20644           -20.0
+34   Test  Worst 2024-02-23  ...  0.00621        -1.05628           -15.0
+35   Test  Worst 2024-02-06  ...  0.00000        -1.05006           -15.0
+36   Test  Worst 2023-01-24  ...  0.00000        -1.05006           -15.0
+37   Test  Worst 2019-11-05  ...  0.00000        -1.04994            15.0
+38   Test  Worst 2023-11-02  ...  0.00569        -1.00589            -6.0
+39   Test  Worst 2024-05-30  ...  0.00566        -0.90571           -15.0
+
+[10 rows x 11 columns]
+Maturity-level holdings and PnL details:
+   Period  Group  ... Convexity Contribution (pp) Gross Contribution (pp)
+31   Test  Worst  ...                    0.000151               -1.649849
+32   Test  Worst  ...                    0.000125               -1.499875
+33   Test  Worst  ...                    0.000130               -1.487870
+34   Test  Worst  ...                   -0.000081               -1.200081
+35   Test  Worst  ...                   -0.000061               -1.050061
+36   Test  Worst  ...                   -0.000061               -1.050061
+37   Test  Worst  ...                   -0.000061               -1.050061
+38   Test  Worst  ...                    0.000061               -1.049939
+39   Test  Worst  ...                    0.000019                0.400019
+40   Test  Worst  ...                   -0.000220               -1.400220
+41   Test  Worst  ...                   -0.000045               -0.900045
+
+[11 rows x 14 columns]
+
+===== Execution-delay sensitivity =====
+  Period                    Variant  ... Sharpe (vs zero) Max Drawdown (%)
+0  Train                   Original  ...           0.7359          -3.8633
+1  Train  Extra 1-observation delay  ...           0.5452          -4.1544
+2   Test                   Original  ...           0.6235          -4.2721
+3   Test  Extra 1-observation delay  ...           0.1794          -9.5705
+
+[4 rows x 12 columns]
+
+===== Original extreme dates: same-date comparison =====
+   Period  Group   PnL Date  ... Original Net (%)  Delayed Net (%)  Difference (pp)
+0   Train   Best 2016-07-05  ...           1.9945           2.0002           0.0058
+1   Train   Best 2013-04-10  ...           1.3942          -0.0057          -1.3999
+2   Train   Best 2012-10-04  ...           1.3940           1.3999           0.0059
+3   Train   Best 2012-03-14  ...           1.0481           1.0539           0.0058
+4   Train   Best 2014-05-19  ...           0.9943           0.0506          -0.9437
+5   Train   Best 2014-05-01  ...           0.8943           0.9000           0.0057
+6   Train   Best 2016-02-08  ...           0.8746          -0.0055          -0.8800
+7   Train   Best 2016-11-07  ...           0.7943           0.3217          -0.4726
+8   Train   Best 2016-02-17  ...           0.7439           0.7500           0.0061
+9   Train   Best 2012-06-29  ...           0.6570           0.3074          -0.3496
+10  Train  Worst 2014-05-28  ...          -1.6056          -0.2055           1.4001
+11  Train  Worst 2012-08-03  ...          -1.5060          -0.0061           1.4999
+12  Train  Worst 2012-07-20  ...          -1.2060          -0.0059           1.2001
+13  Train  Worst 2014-04-17  ...          -1.0557          -0.1193           0.9364
+14  Train  Worst 2016-07-15  ...          -1.0058          -0.0556           0.9501
+15  Train  Worst 2016-06-23  ...          -1.0056          -0.0056           0.9999
+16  Train  Worst 2014-12-19  ...          -0.9110          -0.0058           0.9052
+17  Train  Worst 2015-01-02  ...          -0.9058          -0.9000           0.0058
+18  Train  Worst 2014-12-16  ...          -0.7558          -0.0058           0.7500
+19  Train  Worst 2012-06-01  ...          -0.6254          -0.3019           0.3235
+20   Test   Best 2020-09-04  ...           2.3942          -0.7310          -3.1251
+21   Test   Best 2024-03-14  ...           1.3499          -0.0061          -1.3560
+22   Test   Best 2021-11-30  ...           1.2001           1.2001           0.0000
+23   Test   Best 2024-05-29  ...           1.1999          -0.2056          -1.4055
+24   Test   Best 2026-08-25  ...           1.1944           1.2001           0.0057
+25   Test   Best 2020-01-03  ...           1.1942          -0.1056          -1.2998
+26   Test   Best 2025-03-24  ...           1.1939           1.1999           0.0060
+27   Test   Best 2020-01-28  ...           0.9941          -0.0058          -0.9999
+28   Test   Best 2018-10-04  ...           0.9887          -0.7612          -1.7499
+29   Test   Best 2026-03-16  ...           0.8944           0.0245          -0.8699
+30   Test  Worst 2019-11-07  ...          -1.6606          -1.6498           0.0108
+31   Test  Worst 2018-10-03  ...          -1.5111           1.9886           3.4997
+32   Test  Worst 2020-03-17  ...          -1.4981          -0.1012           1.3970
+33   Test  Worst 2020-05-29  ...          -1.2064          -0.0068           1.1996
+34   Test  Worst 2024-02-23  ...          -1.0563          -1.0501           0.0062
+35   Test  Worst 2024-02-06  ...          -1.0501          -0.0063           1.0438
+36   Test  Worst 2023-01-24  ...          -1.0501          -1.0501           0.0000
+37   Test  Worst 2019-11-05  ...          -1.0499          -0.0060           1.0440
+38   Test  Worst 2023-11-02  ...          -1.0059          -0.0057           1.0002
+39   Test  Worst 2024-05-30  ...          -0.9057          -0.9000           0.0057
+
+[40 rows x 7 columns]
+===== Raw-data missingness audit =====
+                                     Count
+Rows on the original date index       4346
+Rows missing all maturities            178
+Rows missing some maturities             0
+Rows complete across all maturities   4168
+
+===== Baseline rebalancing on dates without quotes =====
+No-quote rows with target position changes: 7
+            Target turnover  Target gross exposure  Recorded cost (%)
+DATE                                                                 
+2020-07-03         1.632653                    1.0           0.009125
+2012-07-04         1.000000                    1.0           0.005552
+2010-11-25         1.000000                    1.0           0.005847
+2015-11-11         1.000000                    0.0           0.005564
+2013-05-27         1.000000                    1.0           0.005250
+2019-11-28         1.000000                    1.0           0.005637
+2018-10-08         0.183673                    1.0           0.000944
+2019-02-18         0.000000                    0.0           0.000000
+2019-04-19         0.000000                    0.0           0.000000
+2021-01-18         0.000000                    0.0           0.000000
+2021-02-15         0.000000                    0.0           0.000000
+2021-05-31         0.000000                    0.0           0.000000
+2021-07-05         0.000000                    1.0           0.000000
+2021-09-06         0.000000                    0.0           0.000000
+2018-12-25         0.000000                    1.0           0.000000
+
+===== Refitting NSS on valid quote dates =====
+Calibrating NSS curve day by day...
+Rows with missing NSS fits: 0
+
+Fixed parameters:window=252, entry_z=2.0, top_n=2, gross_leverage=1.0
+Common training scoring start: 2011-07-06
+Volatility and Sharpe below use observed annual frequency and may differ from legacy tables.
+
+===== Calendar and execution assumption comparison =====
+  Period                Variant  ... Sharpe vs zero Max drawdown (%)
+0  Train             A Original  ...         0.7240          -3.8633
+1  Train          B Quote dates  ...         1.0520          -3.3118
+2  Train  C Quote dates + delay  ...         0.0459          -4.5532
+3   Test             A Original  ...         0.6342          -4.2721
+4   Test          B Quote dates  ...         0.4070          -5.4047
+5   Test  C Quote dates + delay  ...         0.4821          -6.2354
+
+[6 rows x 13 columns]
+
+===== Timing example: around 2016-07-04 =====
+           Return interval start  ... Calendar gap
+DATE                              ...             
+2016-06-30            2016-06-29  ...          1.0
+2016-07-01            2016-06-30  ...          1.0
+2016-07-05            2016-07-01  ...          4.0
+2016-07-06            2016-07-05  ...          1.0
+2016-07-07            2016-07-06  ...          1.0
+2016-07-08            2016-07-07  ...          1.0
+
+[6 rows x 5 columns]
