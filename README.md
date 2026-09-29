@@ -1,4 +1,4 @@
-# U.S. Treasury NSS Rich–Cheap Research
+# U.S. Treasury Curve Research: NSS Signals and Backtest Robustness
 
 **A reproducible fixed-income learning project: curve fitting, residual-based trading signals, and the limits of a historical backtest.**
 
